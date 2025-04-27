@@ -301,10 +301,15 @@ const MapInterface: React.FC = () => {
         className="w-full h-full z-0"
         scrollWheelZoom={true}
       >
-        <TileLayer
+        {/* <TileLayer
           attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> contributors'
           url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
-        />
+        /> */}
+
+      <TileLayer
+        attribution='&copy; OpenStreetMap contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
 
         {/* User Location */}
         <Marker position={[settings.center.lat, settings.center.lng]}>

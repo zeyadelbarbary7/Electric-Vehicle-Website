@@ -248,10 +248,16 @@ const TrackingInterface: React.FC<TrackingInterfaceProps> = ({ bookingId = 'BK-1
     className="w-full h-full"
     scrollWheelZoom={false}
   >
-    <TileLayer
+    {/* <TileLayer
       attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> contributors'
       url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
+    /> */}
+
+    <TileLayer
+      attribution='&copy; OpenStreetMap contributors'
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
+    
     {/* User marker */}
     <Marker position={[30.021375 , 31.403591]} icon={userIcon}>
       <Popup>You</Popup>
