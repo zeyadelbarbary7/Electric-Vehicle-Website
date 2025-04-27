@@ -5,10 +5,10 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import vanPng from '../common/8607666.png'
-import userPng from '../common/nice_user_pin.png'
+import userPng from '../common/9356777.png'
 const userIcon = L.icon({
   iconUrl: userPng,
-  iconSize: [24, 24],
+  iconSize: [30, 30],
   iconAnchor: [12, 12],
   popupAnchor: [0, -12],
 });
@@ -257,7 +257,7 @@ const TrackingInterface: React.FC<TrackingInterfaceProps> = ({ bookingId = 'BK-1
       attribution='&copy; OpenStreetMap contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    
+
     {/* User marker */}
     <Marker position={[30.021375 , 31.403591]} icon={userIcon}>
       <Popup>You</Popup>

@@ -219,11 +219,17 @@ import MapControls from './MapControls';
 import { ChargingVan, MapSettings } from '../../types';
 import { mockVans } from '../../data/mockData';
 import vanPng from '../common/8607666.png'
-
+import userPng from '../common/9356777.png'
+const userIcon = L.icon({
+  iconUrl: userPng,
+  iconSize: [45, 45],
+  iconAnchor: [12, 12],
+  popupAnchor: [0, -12],
+});
 
 const vanIcon = L.icon({
   iconUrl: vanPng,
-  iconSize: [40, 40],      // adjust to your PNG’s size
+  iconSize: [50, 50],      // adjust to your PNG’s size
   iconAnchor: [20, 40],    // point of the icon which corresponds to marker’s location
   popupAnchor: [0, -40],   // where popups should open relative to iconAnchor
 });
@@ -312,7 +318,7 @@ const MapInterface: React.FC = () => {
       />
 
         {/* User Location */}
-        <Marker position={[settings.center.lat, settings.center.lng]}>
+        <Marker position={[settings.center.lat, settings.center.lng]} icon={userIcon}>
           <Popup>You are here</Popup>
         </Marker>
 
