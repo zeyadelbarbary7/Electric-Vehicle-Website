@@ -46,8 +46,8 @@ const ServiceSelectionStep: React.FC<ServiceSelectionStepProps> = ({
     const isUrgent = e.target.checked;
     
     // Update pricing based on urgency
-    const newPrice = isUrgent ? 300.00 : 160.00 ;
-    const newDuration = isUrgent ? 30 : 45;
+    const newPrice = isUrgent ? 500.00 : 160.00 ;
+    const newDuration = isUrgent ? 15 : 45;
     
     updateFormData({ 
       isUrgent, 
@@ -173,7 +173,7 @@ const ServiceSelectionStep: React.FC<ServiceSelectionStepProps> = ({
         {formData.price.toFixed(2)}
       </>
     ) : (
-      <span className="text-lg font-semibold">160.00 E£ - 240.00 E£</span>
+      <span className="text-lg font-semibold">280 E£ - 400 E£</span>
     )}
   </span>
           </div>
